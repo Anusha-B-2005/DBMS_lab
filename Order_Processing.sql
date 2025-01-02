@@ -1,4 +1,3 @@
-
 Drop DATABASE if exists Order_Processing;
 CREATE DATABASE Order_Processing;
 Use Order_Processing;
@@ -14,7 +13,7 @@ CREATE TABLE Orderp(
     odate DATE,
     cust INT,
     order_amout INT,
-    FOREIGN KEY(cust) REFERENCES Customer(cust)
+    FOREIGN KEY(cust) REFERENCES Customer(cust) ON DELETE CASCADE
 );
 
 CREATE TABLE item(
@@ -26,8 +25,8 @@ CREATE TABLE order_item(
     orderp INT,
     item INT,
     qty INT,
-    FOREIGN KEY(orderp) REFERENCES Orderp(orderp),
-    FOREIGN KEY(item) REFERENCES item(item)
+    FOREIGN KEY(orderp) REFERENCES Orderp(orderp) ON DELETE CASCADE,
+    FOREIGN KEY(item) REFERENCES item(item) ON DELETE CASCADE
 );
 
 CREATE TABLE warehouse(
@@ -39,5 +38,5 @@ CREATE TABLE shipment(
     orderp INT,
     warehouse INT PRIMARY KEY,
     ship_date DATE,
-    FOREIGN KEY(orderp) REFERENCES Orderp(orderp)
+    FOREIGN KEY(orderp) REFERENCES Orderp(orderp) ON DELETE CASCADE
 );
