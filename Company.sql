@@ -1,0 +1,43 @@
+DROP DATABASE if exists Company;
+CREATE DATABASE Company;
+USE Company;
+
+CREATE TABLE Employee(
+    ssn VARCHAR(20) PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    address VARCHAR(100) ,
+    sex VARCHAR(10) NOT NULL,
+    salary INT NOT NULL,
+    superSSN VARCHAR(20) NOT NULL,
+    DNo VARCHAR(10) 
+);
+
+CREATE TABLE Department(
+    DNo VARCHAR(10) PRIMARY KEY,
+    DName VARCHAR(20) NOT NULL,
+    mgrSsn VARCHAR(20) NOT NULL,
+    mgrStartDate DATE,
+    FOREIGN KEY(mgrSsn) REFERENCES Employee(ssn)
+);
+
+CREATE TABLE Dlocation(
+    DNo VARCHAR(10) NOT NULL,
+    Dloc VARCHAR(30),
+    FOREIGN KEY(DNo) REFERENCES Department(DNo) 
+);
+
+CREATE TABLE Project(
+    PNo VARCHAR(20) PRIMARY KEY,
+    Pname VARCHAR(50) NOT NULL,
+    Plocation VARCHAR(100) NOT NULL,
+    DNo VARCHAR(10) NOT NULL,
+    FOREIGN KEY(DNo) REFERENCES Department(DNo) 
+);
+
+CREATE TABLE Works_on(
+    ssn VARCHAR(20) NOT NULL,
+    PNo VARCHAR(20) NOT NULL,
+    Hours INT DEFAULT 0,
+    FOREIGN KEY(ssn) REFERENCES Employee(ssn),
+    FOREIGN KEy(PNo) REFERENCES Project(PNo)
+);
