@@ -20,15 +20,15 @@ CREATE TABLE Enroll(
     course INT,
     sem INT NOT NULL,
     marks INT NOT NULL,
-    FOREIGN KEY(regno) REFERENCES Student(regno),
-    FOREIGN KEY(course) REFERENCES Course(course)
+    FOREIGN KEY(regno) REFERENCES Student(regno) ON DELETE CASCADE,
+    FOREIGN KEY(course) REFERENCES Course(course) ON DELETE CASCADE
 );
 
 CREATE TABLE book_adoption(
     course INT,
     sem INT NOT NULL,
     book_ISBN INT NOT NULL,
-    FOREIGN KEY(course) REFERENCES Course(course)
+    FOREIGN KEY(course) REFERENCES Course(course) ON DELETE CASCADE
 );
 
 CREATE TABLE text(
