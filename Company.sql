@@ -9,7 +9,7 @@ CREATE TABLE Employee(
     sex VARCHAR(10) NOT NULL,
     salary INT NOT NULL,
     superSSN VARCHAR(20) NOT NULL,
-    DNo VARCHAR(10) 
+    DNo VARCHAR(10)
 );
 
 CREATE TABLE Department(
@@ -41,3 +41,9 @@ CREATE TABLE Works_on(
     FOREIGN KEY(ssn) REFERENCES Employee(ssn),
     FOREIGN KEy(PNo) REFERENCES Project(PNo)
 );
+
+INSERT INTO Employee VALUES ('50EMP0001', 'Aravind', 'Address 1', 'Male', 65000, '50EMP0001', 'D01');
+INSERT INTO Employee VALUES ('50EMP0002', 'Akshatha', 'Address 2', 'Female', 85000, '50EMP002', 'D02');
+INSERT INTO Employee VALUES ('50EMP0003', 'Aniruddh', 'Address 3', 'Male', 95000, '50EMP0001', 'D03');
+INSERT INTO Employee VALUES ('50EMP0004', 'Aravind Aru', 'Address 4', 'Male', 45000, '50EMP0002', 'D04');
+INSERT INTO Employee VALUES ('50EMP0005', 'Anjali', 'Address 5', 'Feale', 55000, '50EMP0005', 'D05');
