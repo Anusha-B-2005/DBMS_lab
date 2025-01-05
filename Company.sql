@@ -66,3 +66,8 @@ INSERT INTO Project VALUES ('P0003', 'Project3', 'SaraswathiPuram, Hassan', 'D03
 INSERT INTO Project VALUES ('P0004', 'Project4', 'VidyaranyaPuam, Haveri', 'D04');
 INSERT INTO Project VALUES ('P0005', 'Project5', 'Nelamagala, Bangaluru', 'D05');
 
+INSERT INTO Works_on VALUES ('50EMP0001', 'P0003', 4);
+INSERT INTO Works_on VALUES ('50EMP0004', 'P0002', 7);
+INSERT INTO Works_on VALUES ('50EMP0003', 'P0004', 6);
+INSERT INTO Works_on VALUES ('50EMP0005', 'P0005', 6);
+INSERT INTO Works_on VALUES ('50EMP0002', 'P0001', 5);
