@@ -47,3 +47,10 @@ INSERT INTO Employee VALUES ('50EMP0002', 'Akshatha', 'Address 2', 'Female', 850
 INSERT INTO Employee VALUES ('50EMP0003', 'Aniruddh', 'Address 3', 'Male', 95000, '50EMP0001', 'D03');
 INSERT INTO Employee VALUES ('50EMP0004', 'Aravind Aru', 'Address 4', 'Male', 45000, '50EMP0002', 'D04');
 INSERT INTO Employee VALUES ('50EMP0005', 'Anjali', 'Address 5', 'Feale', 55000, '50EMP0005', 'D05');
+
+INSERT INTO Department VALUES ('D01', 'Finance department', '50EMP0001', '2020-02-02');
+INSERT INTO Department VALUES ('D02', 'Human Resources', '50EMP0003', '2019-05-02');
+INSERT INTO Department VALUES ('D03', 'Data Entry', '50EMP0005', '2022-12-15');
+INSERT INTO Department VALUES ('D04', 'Accounts', '50EMP0004', '2020-12-02');
+INSERT INTO Department VALUES ('D05', 'Quality Assessment', '50EMP0002', '2018-12-12');
+
