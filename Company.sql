@@ -60,3 +60,9 @@ INSERT INTO Dlocation VALUES ('D02', 'SaraswathiPuram, Hassan');
 INSERT INTO Dlocation VALUES ('D02', 'VidyaranyaPuam, Haveri');
 INSERT INTO Dlocation VALUES ('D02', 'Nelamagala, Bangaluru');
 
+INSERT INTO Project VALUES ('P0001', 'Project1', 'Industrial Area, Davanagere', 'D01');
+INSERT INTO Project VALUES ('P0002', 'Project2', 'KuvempuNagar, Mysuru', 'D02');
+INSERT INTO Project VALUES ('P0003', 'Project3', 'SaraswathiPuram, Hassan', 'D03');
+INSERT INTO Project VALUES ('P0004', 'Project4', 'VidyaranyaPuam, Haveri', 'D04');
+INSERT INTO Project VALUES ('P0005', 'Project5', 'Nelamagala, Bangaluru', 'D05');
+
