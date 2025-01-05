@@ -33,3 +33,10 @@ CREATE TABLE PARTICIPATED (
     damage_amout INT NOT NULL,
     FOREIGN KEY (driver_id) REFERENCES PERSON (driver_id) ON DELETE CASCADE
 );
+
+INSERT INTO PERSON VALUES ('D101', 'Aravind', 'Jayanagar, Shivamogga');
+INSERT INTO PERSON VALUES ('D201', 'Avinash', 'Kuvempnagar, Mysuru');
+INSERT INTO PERSON VALUES ('D301', 'Akshatha', 'saraswathiPuram, Hassan');
+INSERT INTO PERSON VALUES ('D401', 'Anuradha', 'Devaraj Aras Nagar, Davanagere');
+INSERT INTO PERSON VALUES ('D501', 'Akil', 'VijayNagar, Mysuru');
+
