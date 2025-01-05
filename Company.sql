@@ -54,3 +54,9 @@ INSERT INTO Department VALUES ('D03', 'Data Entry', '50EMP0005', '2022-12-15');
 INSERT INTO Department VALUES ('D04', 'Accounts', '50EMP0004', '2020-12-02');
 INSERT INTO Department VALUES ('D05', 'Quality Assessment', '50EMP0002', '2018-12-12');
 
+INSERT INTO Dlocation VALUES ('D01', 'Industrial Area, Davanagere');
+INSERT INTO Dlocation VALUES ('D02', 'KuvempuNagar, Mysuru');
+INSERT INTO Dlocation VALUES ('D02', 'SaraswathiPuram, Hassan');
+INSERT INTO Dlocation VALUES ('D02', 'VidyaranyaPuam, Haveri');
+INSERT INTO Dlocation VALUES ('D02', 'Nelamagala, Bangaluru');
+
