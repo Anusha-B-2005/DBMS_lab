@@ -9,8 +9,8 @@ CREATE TABLE PERSON(
 );
 
 CREATE TABLE CAR(
-    regno VARCHAR(10) PRIMARY KEY,
-    model VARCHAR(10) NOT NULL,
+    regno VARCHAR(20) PRIMARY KEY,
+    model VARCHAR(20) NOT NULL,
     year INT
 );
 
@@ -40,3 +40,8 @@ INSERT INTO PERSON VALUES ('D301', 'Akshatha', 'saraswathiPuram, Hassan');
 INSERT INTO PERSON VALUES ('D401', 'Anuradha', 'Devaraj Aras Nagar, Davanagere');
 INSERT INTO PERSON VALUES ('D501', 'Akil', 'VijayNagar, Mysuru');
 
+INSERT INTO CAR VALUES ('KA-20-PQ-1234', 'Honda', 2012);
+INSERT INTO CAR VALUES ('KA-22-PR-1256', 'Hyundai', 2021);
+INSERT INTO CAR VALUES ('KA-25-PS-1278', 'Toyota', 2011);
+INSERT INTO CAR VALUES ('KA-28-PT-1289', 'Kia', 2013);
+INSERT INTO CAR VALUES ('KA-25-PU-1245', 'Renault', 2022);
