@@ -48,11 +48,15 @@ INSERT INTO Employee VALUES ('50EMP0003', 'Aniruddh', 'Address 3', 'Male', 95000
 INSERT INTO Employee VALUES ('50EMP0004', 'Aravind Aru', 'Address 4', 'Male', 45000, '50EMP0002', 'D04');
 INSERT INTO Employee VALUES ('50EMP0005', 'Anjali', 'Address 5', 'Feale', 55000, '50EMP0005', 'D05');
 
+SELECT * FROM Employee;
+
 INSERT INTO Department VALUES ('D01', 'Finance department', '50EMP0001', '2020-02-02');
 INSERT INTO Department VALUES ('D02', 'Human Resources', '50EMP0003', '2019-05-02');
 INSERT INTO Department VALUES ('D03', 'Data Entry', '50EMP0005', '2022-12-15');
 INSERT INTO Department VALUES ('D04', 'Accounts', '50EMP0004', '2020-12-02');
 INSERT INTO Department VALUES ('D05', 'Quality Assessment', '50EMP0002', '2018-12-12');
+
+SELECT * FROM Department;
 
 INSERT INTO Dlocation VALUES ('D01', 'Industrial Area, Davanagere');
 INSERT INTO Dlocation VALUES ('D02', 'KuvempuNagar, Mysuru');
@@ -60,14 +64,20 @@ INSERT INTO Dlocation VALUES ('D02', 'SaraswathiPuram, Hassan');
 INSERT INTO Dlocation VALUES ('D02', 'VidyaranyaPuam, Haveri');
 INSERT INTO Dlocation VALUES ('D02', 'Nelamagala, Bangaluru');
 
+SELECT * FROM Dlocation;
+
 INSERT INTO Project VALUES ('P0001', 'Project1', 'Industrial Area, Davanagere', 'D01');
 INSERT INTO Project VALUES ('P0002', 'Project2', 'KuvempuNagar, Mysuru', 'D02');
 INSERT INTO Project VALUES ('P0003', 'Project3', 'SaraswathiPuram, Hassan', 'D03');
 INSERT INTO Project VALUES ('P0004', 'Project4', 'VidyaranyaPuam, Haveri', 'D04');
 INSERT INTO Project VALUES ('P0005', 'Project5', 'Nelamagala, Bangaluru', 'D05');
 
+SELECT * FROM Project;
+
 INSERT INTO Works_on VALUES ('50EMP0001', 'P0003', 4);
 INSERT INTO Works_on VALUES ('50EMP0004', 'P0002', 7);
 INSERT INTO Works_on VALUES ('50EMP0003', 'P0004', 6);
 INSERT INTO Works_on VALUES ('50EMP0005', 'P0005', 6);
 INSERT INTO Works_on VALUES ('50EMP0002', 'P0001', 5);
+
+SELECT * FROM Works_on;
