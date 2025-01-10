@@ -40,3 +40,10 @@ CREATE TABLE shipment(
     ship_date DATE,
     FOREIGN KEY(orderp) REFERENCES Orderp(orderp) ON DELETE CASCADE
 );
+
+insert into Customer values(0001, 'Arjun', 'Mysuru');
+insert into Customer values(0002, 'Vikram', 'Mandya');
+insert into Customer values(0003, 'Vijay', 'Madikere');
+insert into Customer values(0004, 'Trishul', 'Hassan');
+insert into Customer values(0005, 'Triveni', 'Haveri');
+
