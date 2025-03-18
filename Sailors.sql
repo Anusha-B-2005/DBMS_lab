@@ -53,11 +53,13 @@ INSERT INTO RSERVERS VALUES (004, 5004, '2024-11-11');
 SELECT * FROM RSERVERS;
 
 --Find the colours of boats reserved by Albert
+
 SELECT color 
 FROM SAILORS s, BOAT b, RSERVERS r 
 WHERE s.sid=r.sid AND b.bid=r.bid AND s.sname='Albert';
 
 --Find all sailor id's of sailors who have a rating of at least 8 or reserved boat 103
+
 (SELECT s.sid FROM SAILORS s
 WHERE s.rating<=8)
 UNION 
@@ -65,6 +67,7 @@ UNION
 WHERE r.bid=103);
 
 --Find the names of sailors who have not reserved a boat whose name contains the string "storm". Order the names in ascending order.
+
 SELECT s.sname FROM SAILORS s
 WHERE s.sid NOT IN
 (SELECT sa.sid FROM SAILORS sa, RSERVERS rs 
@@ -72,6 +75,27 @@ WHERE sa.sid=rs.sid AND sa.sname LIKE '%storm')
 AND s.sname LIKE '%storm%';
 
 --Find the names of sailors who have reserved all boats.
+
 SELECT s.sname FROM SAILORS s WHERE NOT EXISTS
     (SELECT * FROM BOAT b WHERE NOT EXISTS 
         (SELECT * FROM RSERVERS r WHERE r.bid=b.bid AND s.sid=r.sid));
+
+--Find the name and age of the oldest sailor
+
+SELECT s.SNAME, s.AGE from SAILORS s 
+WHERE s.AGE in (SELECT max(AGE) FROM SAILORS);
+
+--For each boat which was reserved by at least 5 sailors with age >= 40, find the boat id and the average age of such sailors
+
+SELECT b.BID , avg(s.AGE) AS average  FROM BOAT b, SAILORS s, RSERVERS r 
+WHERE s.SID=r.SID and b.BID=r.BID and s.AGE>=40 
+GROUP BY b.BID
+HAVING 5<=count(DISTINCT s.SID);
+
+--Create a view that shows the names and colours of all the boats that have been reserved by a sailor with a specific rating.
+
+CREATE  VIEW RESERVEBOAT AS 
+SELECT DISTINCT BNAME, COLOR FROM SAILORS s, BOAT b, RSERVERS r 
+WHERE s.SID=r.SID and b.BID=r.BID and s.RATING=5;
+
+SELECT * FROm RESERVEBOAT;
